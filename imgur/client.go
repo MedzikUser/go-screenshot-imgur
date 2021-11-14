@@ -9,7 +9,7 @@ import (
 
 var ClientImgur = new(imgur.Client)
 
-func init() {
+func CreateClient() {
 	ClientImgur.HTTPClient = new(http.Client)
 	ClientImgur.ImgurClientID = config.Toml.Imgur.Id
 }
