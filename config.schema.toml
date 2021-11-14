@@ -1,0 +1,9 @@
+path = '/home/user/Screenshots'
+
+[imgur]
+id = 'client_id'
+secret = 'client_secret'
+album = '...'
+
+[discord]
+webhook = 'https://discord.com/api/webhooks/.../...'

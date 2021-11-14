@@ -1,0 +1,30 @@
+project_name: screenshot
+
+before:
+  hooks:
+    - go mod tidy
+
+builds:
+  - main: ./cmd/screenshot
+    binary: '{{ .ProjectName }}'
+
+    goos:
+      - linux
+    goarch:
+      - amd64
+
+    ldflags:
+      - -s -w
+      - -X github.com/MedzikUser/go-screenshot-imgur/config.Version={{ .RawVersion }}
+
+archives:
+  - format: tar.xz
+
+    files:
+      - config.schema.toml
+      - LICENSE
+
+checksum:
+  name_template: 'checksums.txt'
+
+  algorithm: sha256
