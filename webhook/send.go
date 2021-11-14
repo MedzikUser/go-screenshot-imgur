@@ -11,7 +11,7 @@ func Send(url string) error {
 	msg := discordwebhook.Message{
 		Username:  &username,
 		AvatarUrl: new(string),
-		Embeds:    &[]discordwebhook.Embed{
+		Embeds: &[]discordwebhook.Embed{
 			{
 				Title: &url,
 				Image: &discordwebhook.Image{
