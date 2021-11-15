@@ -10,13 +10,11 @@ func Send(url string) error {
 
 	msg := discordwebhook.Message{
 		Username:  &username,
-		AvatarUrl: new(string),
 		Embeds: &[]discordwebhook.Embed{
 			{
 				Title: &url,
-				Image: &discordwebhook.Image{
-					Url: &url,
-				},
+				Color: &config.Discord.EmbedColor,
+				Image: &discordwebhook.Image{Url: &url},
 			},
 		},
 	}
