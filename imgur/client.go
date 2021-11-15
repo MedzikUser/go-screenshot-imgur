@@ -7,7 +7,7 @@ import (
 	"github.com/MedzikUser/go-screenshot-imgur/config"
 )
 
-var ClientImgur = new(imgur.Client)
+var ClientImgur = imgur.Client{}
 
 func CreateClient() {
 	ClientImgur.HTTPClient = new(http.Client)

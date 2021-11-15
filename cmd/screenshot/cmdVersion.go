@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"os"
 	"runtime"
 
@@ -10,7 +9,7 @@ import (
 
 func cmdVersion(c cmdOpts) {
 	if c.Version {
-		fmt.Printf("Version: %s | %s\n", config.Version, runtime.Version())
+		log.Infof("Version: %s | %s\n", config.Version, runtime.Version())
 
 		os.Exit(0)
 	}

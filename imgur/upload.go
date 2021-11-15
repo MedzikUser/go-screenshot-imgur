@@ -2,18 +2,14 @@ package imgur
 
 import (
 	"fmt"
-	"os"
 
 	"github.com/MedzikUser/go-screenshot-imgur/webhook"
-	"github.com/MedzikUser/go-utils/common"
 )
 
-func Upload(filename string) {
+func Upload(filename string) error {
 	i, _, err := ClientImgur.UploadImageFromFile(filename, "")
 	if err != nil {
-		common.Log.Error(err)
-
-		os.Exit(1)
+		return err
 	}
 
 	url := "https://cdn.magicuser.cf/" + i.Data.IDExt
@@ -23,4 +19,6 @@ func Upload(filename string) {
 	fmt.Println("Delete Hash -", i.Data.Deletehash)
 
 	webhook.Send(url, i.Data.Deletehash)
+
+	return nil
 }
