@@ -9,7 +9,7 @@ import (
 )
 
 func cmdFull(filename string, c cmdOpts) {
-	if c.Select {
+	if c.Full {
 		_, err := exec.Command("scrot", filename).Output()
 		if err != nil {
 			common.Log.Error(err)

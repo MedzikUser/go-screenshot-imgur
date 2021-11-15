@@ -9,7 +9,7 @@ import (
 )
 
 func cmdWindow(filename string, c cmdOpts) {
-	if c.Select {
+	if c.Window {
 		_, err := exec.Command("scrot", "-s", "-b", filename).Output()
 		if err != nil {
 			common.Log.Error(err)
