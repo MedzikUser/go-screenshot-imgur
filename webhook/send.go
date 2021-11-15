@@ -1,20 +1,24 @@
 package webhook
 
 import (
+	"fmt"
+
 	"github.com/MedzikUser/go-screenshot-imgur/config"
 	"github.com/gtuk/discordwebhook"
 )
 
-func Send(url string) error {
+func Send(url string, deletehash string) error {
 	var username = "CDN"
+	var description = fmt.Sprintf("Delete Hash: ||%s||", deletehash)
 
 	msg := discordwebhook.Message{
-		Username:  &username,
+		Username: &username,
 		Embeds: &[]discordwebhook.Embed{
 			{
-				Title: &url,
-				Color: &config.Discord.EmbedColor,
-				Image: &discordwebhook.Image{Url: &url},
+				Title:       &url,
+				Description: &description,
+				Color:       &config.Discord.EmbedColor,
+				Image:       &discordwebhook.Image{Url: &url},
 			},
 		},
 	}

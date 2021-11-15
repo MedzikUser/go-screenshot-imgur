@@ -11,5 +11,6 @@ var ClientImgur = new(imgur.Client)
 
 func CreateClient() {
 	ClientImgur.HTTPClient = new(http.Client)
-	ClientImgur.ImgurClientID = config.Toml.Imgur.Id
+	ClientImgur.Imgur.ClientID = config.Toml.Imgur.Id
+	ClientImgur.Imgur.AccessToken = config.Toml.Imgur.Secret
 }

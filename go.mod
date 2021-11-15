@@ -4,7 +4,7 @@ go 1.17
 
 require (
 	github.com/BurntSushi/toml v0.4.1
-	github.com/MedzikUser/go-imgur v0.0.0-20211114152404-6a3b71ed6d98
+	github.com/MedzikUser/go-imgur v0.1.0
 	github.com/MedzikUser/go-utils v1.0.0
 	github.com/gtuk/discordwebhook v1.0.0
 	github.com/jpillora/opts v1.2.0

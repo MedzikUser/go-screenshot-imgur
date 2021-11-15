@@ -15,6 +15,8 @@ func cmdSelect(filename string, c cmdOpts) {
 		_, err := exec.Command("scrot", "-s", filename).Output()
 		if err != nil {
 			common.Log.Error(err)
+
+			os.Exit(1)
 		}
 
 		i, _, err := imgur.ClientImgur.UploadImageFromFile(filename, "")
@@ -30,6 +32,8 @@ func cmdSelect(filename string, c cmdOpts) {
 		fmt.Println("ID          -", i.Data.ID)
 		fmt.Println("Delete hash -", i.Data.Deletehash)
 
-		webhook.Send(url)
+		webhook.Send(url, i.Data.Deletehash)
+
+		os.Exit(0)
 	}
 }

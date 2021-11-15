@@ -9,11 +9,12 @@ import (
 )
 
 type cmdOpts struct {
-	Select  bool   `opts:"help=take screenshot in select mode"`
-	Window  bool   `opts:"help=take screenshot in window mode"`
-	Full    bool   `opts:"help=take screenshot in full mode"`
-	Config  string `opts:"help=path to config file"`
-	Version bool   `opts:"help=get version"`
+	Select      bool   `opts:"help=take screenshot in select mode"`
+	Window      bool   `opts:"help=take screenshot in window mode"`
+	Full        bool   `opts:"help=take screenshot in full mode"`
+	DeleteImage string `opts:"help=delete image from imgur. Paste deletehash"`
+	Config      string `opts:"help=path to config file"`
+	Version     bool   `opts:"help=get version"`
 }
 
 func main() {
@@ -30,6 +31,8 @@ func main() {
 	config.TomlParse(c.Config)
 
 	imgur.CreateClient()
+
+	cmdDeleteImg(c)
 
 	filename := config.Toml.Path + "/" + time.Now().Format("2006-01-02T15:04:05-0700") + config.FileExt
 

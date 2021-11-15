@@ -1,8 +1,8 @@
 github.com/BurntSushi/toml v0.4.1 h1:GaI7EiDXDRfa8VshkTj7Fym7ha+y8/XxIgD2okUIjLw=
 github.com/BurntSushi/toml v0.4.1/go.mod h1:CxXYINrC8qIiEnFrOxCa7Jy5BFHlXnUU2pbicEuybxQ=
 github.com/MedzikUser/go-github-selfupdate v1.3.1/go.mod h1:vq1/KNWXN7R/aKZFD5p2rsIdQ+2FSXnlIts1QHEZCM4=
-github.com/MedzikUser/go-imgur v0.0.0-20211114152404-6a3b71ed6d98 h1:Px1UbzoxuDE3q7cBXHtU4P6S9KRJb/qNM+6b62NnDSI=
-github.com/MedzikUser/go-imgur v0.0.0-20211114152404-6a3b71ed6d98/go.mod h1:uMAx+PtJEZeuSplqlVINaSbxQW9Hl2JRU/Ayf8QrAY4=
+github.com/MedzikUser/go-imgur v0.1.0 h1:ZOsZrHMz7o3N5apV2c3baicU4eaF36voFPFQUy9v4A8=
+github.com/MedzikUser/go-imgur v0.1.0/go.mod h1:uMAx+PtJEZeuSplqlVINaSbxQW9Hl2JRU/Ayf8QrAY4=
 github.com/MedzikUser/go-utils v1.0.0 h1:+fq8rTY1Smm9u/FSWYBYi6fREhctbjNcuQR59j+XXbQ=
 github.com/MedzikUser/go-utils v1.0.0/go.mod h1:xP+KbYBL9TESTLP4vWnvIT0v+uq5reR4l5S7Nq4eeKo=
 github.com/blang/semver/v4 v4.0.0/go.mod h1:IbckMUScFkM3pff0VJDNKRiT6TG/YpiHIM2yvyW5YoQ=
