@@ -1,7 +1,7 @@
 image: medzik/gitpod:full
 
-checkoutLocation: "go/src/pingbot"
-workspaceLocation: "go/src/pingbot"
+checkoutLocation: "go/src/screenshot-imgur"
+workspaceLocation: "go/src/screenshot-imgur"
 
 vscode:
   extensions:

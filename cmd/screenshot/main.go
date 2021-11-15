@@ -37,4 +37,6 @@ func main() {
 	filename := config.Toml.Path + "/" + time.Now().Format("2006-01-02T15:04:05-0700") + config.FileExt
 
 	cmdSelect(filename, c)
+	cmdWindow(filename, c)
+	cmdFull(filename, c)
 }
