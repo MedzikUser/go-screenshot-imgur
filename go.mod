@@ -15,5 +15,5 @@ require (
 	github.com/hashicorp/go-multierror v1.1.1 // indirect
 	github.com/posener/complete v1.2.3 // indirect
 	github.com/stretchr/testify v1.7.0 // indirect
-	golang.org/x/sys v0.0.0-20211113001501-0c823b97ae02 // indirect
+	golang.org/x/sys v0.0.0-20211116061358-0a5406a5449c // indirect
 )
