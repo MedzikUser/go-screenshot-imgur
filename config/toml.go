@@ -6,6 +6,7 @@ import (
 	"github.com/BurntSushi/toml"
 )
 
+// Toml config struct
 type Config struct {
 	Path    string
 	Imgur   ConfigImgur
@@ -24,6 +25,7 @@ type ConfigDiscord struct {
 
 var Toml Config
 
+// Parse Toml config
 func TomlParse(configPath string) error {
 	_, err := toml.DecodeFile(configPath, &Toml)
 

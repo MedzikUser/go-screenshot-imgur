@@ -6,6 +6,7 @@ import (
 	"github.com/MedzikUser/go-screenshot-imgur/webhook"
 )
 
+// Upload Image to Imgur, from file
 func UploadFile(filename string) error {
 	i, _, err := ClientImgur.UploadImageFromFile(filename, "")
 	if err != nil {
@@ -17,6 +18,7 @@ func UploadFile(filename string) error {
 	return nil
 }
 
+// Upload Image to Imgur, from url
 func UploadURL(url string) error {
 	i, _, err := ClientImgur.UploadImageFromURL(url, "")
 	if err != nil {
@@ -28,6 +30,7 @@ func UploadURL(url string) error {
 	return nil
 }
 
+// Send webhook and print img info
 func next(id string, delhash string) {
 	url := "https://cdn.magicuser.cf/" + id
 

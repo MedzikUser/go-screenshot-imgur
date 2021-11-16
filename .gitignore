@@ -1,9 +1,10 @@
 # Binaries for programs and plugins
 *.out
-dist
+dist/
 
 # Compressed files
 *.xz
+*.gz
 
 # Test binary, built with `go test -c`
 *.test
@@ -14,5 +15,3 @@ tmp/
 
 # Config
 config.toml
-
-dist/

@@ -33,6 +33,7 @@ func main() {
 
 	opts.Parse(&c)
 
+	// --version, -v
 	cmdVersion(c)
 
 	if c.Config == "" {
@@ -46,14 +47,21 @@ func main() {
 
 	imgur.CreateClient()
 
+	// --delete-image, -d
 	cmdDeleteImg(c)
+
+	// --upload-file path/to/file
 	cmdUploadFile(c)
+	// --upload-url https://url/img
 	cmdUploadUrl(c)
 
 	filename := config.Toml.Path + "/" + time.Now().Format("2006-01-02T15:04:05-0700") + config.FileExt
 
+	// --select, -s
 	cmdSelect(filename, c)
+	// --window, -w
 	cmdWindow(filename, c)
+	// --full, -f
 	cmdFull(filename, c)
 
 	log.Info("Use with --help or -h to get more informations.")

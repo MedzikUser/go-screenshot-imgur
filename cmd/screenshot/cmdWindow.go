@@ -7,6 +7,7 @@ import (
 	"github.com/MedzikUser/go-screenshot-imgur/imgur"
 )
 
+// --window, -w
 func cmdWindow(filename string, c cmdOpts) {
 	if c.Window {
 		_, err := exec.Command("scrot", "-u", filename).Output()

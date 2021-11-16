@@ -6,6 +6,7 @@ import (
 	"github.com/MedzikUser/go-screenshot-imgur/imgur"
 )
 
+// --delete-image, -d
 func cmdDeleteImg(c cmdOpts) {
 	if c.DeleteImage != "" {
 		i, _, err := imgur.ClientImgur.DeleteImageUnAuthed(c.DeleteImage)

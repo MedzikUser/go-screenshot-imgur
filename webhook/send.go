@@ -7,6 +7,7 @@ import (
 	"github.com/gtuk/discordwebhook"
 )
 
+// Send Webhook to Discord Channel
 func Send(url string, deletehash string) error {
 	var username = "CDN"
 	var description = fmt.Sprintf("Delete Hash: ||%s||", deletehash)
