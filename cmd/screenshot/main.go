@@ -15,7 +15,7 @@ type cmdOpts struct {
 	Window      bool   `opts:"help=take screenshot in window mode"`
 	Full        bool   `opts:"help=take screenshot in full mode"`
 	DeleteImage string `opts:"help=delete image from imgur. Paste deletehash"`
-	UploadFile      string `opts:"help=upload image from file to imgur"`
+	UploadFile  string `opts:"help=upload image from file to imgur"`
 	UploadUrl   string `opts:"help=upload image from url to imgur"`
 	Config      string `opts:"help=path to config file"`
 	Version     bool   `opts:"help=get version"`
