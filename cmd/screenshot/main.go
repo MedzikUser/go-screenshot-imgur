@@ -15,7 +15,8 @@ type cmdOpts struct {
 	Window      bool   `opts:"help=take screenshot in window mode"`
 	Full        bool   `opts:"help=take screenshot in full mode"`
 	DeleteImage string `opts:"help=delete image from imgur. Paste deletehash"`
-	Upload      string `opts:"help=upload specified file to imgur"`
+	UploadFile      string `opts:"help=upload image from file to imgur"`
+	UploadUrl   string `opts:"help=upload image from url to imgur"`
 	Config      string `opts:"help=path to config file"`
 	Version     bool   `opts:"help=get version"`
 }
@@ -46,7 +47,8 @@ func main() {
 	imgur.CreateClient()
 
 	cmdDeleteImg(c)
-	cmdUpload(c)
+	cmdUploadFile(c)
+	cmdUploadUrl(c)
 
 	filename := config.Toml.Path + "/" + time.Now().Format("2006-01-02T15:04:05-0700") + config.FileExt
 

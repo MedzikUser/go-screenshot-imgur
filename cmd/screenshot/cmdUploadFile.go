@@ -6,9 +6,9 @@ import (
 	"github.com/MedzikUser/go-screenshot-imgur/imgur"
 )
 
-func cmdUpload(c cmdOpts) {
-	if c.Upload != "" {
-		err := imgur.Upload(c.Upload)
+func cmdUploadFile(c cmdOpts) {
+	if c.UploadFile != "" {
+		err := imgur.UploadFile(c.UploadFile)
 		if err != nil {
 			log.Fatal(err)
 		}

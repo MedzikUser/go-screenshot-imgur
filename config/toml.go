@@ -27,7 +27,7 @@ var Toml Config
 func TomlParse(configPath string) error {
 	_, err := toml.DecodeFile(configPath, &Toml)
 
-	if err != nil && strings.Contains(err.Error(), "no such file or directory") {
+	if err != nil && !strings.Contains(err.Error(), "no such file or directory") {
 		return err
 	}
 

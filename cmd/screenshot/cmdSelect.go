@@ -14,7 +14,7 @@ func cmdSelect(filename string, c cmdOpts) {
 			log.Fatal(err)
 		}
 
-		err = imgur.Upload(filename)
+		err = imgur.UploadFile(filename)
 		if err != nil {
 			log.Fatal(err)
 		}
