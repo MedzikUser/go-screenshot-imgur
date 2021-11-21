@@ -6,23 +6,6 @@ import (
 	"github.com/BurntSushi/toml"
 )
 
-// Toml config struct
-type Config struct {
-	Path    string
-	Imgur   ConfigImgur
-	Discord ConfigDiscord
-}
-
-type ConfigImgur struct {
-	Id     string
-	Secret string
-	Album  string
-}
-
-type ConfigDiscord struct {
-	Webhook string
-}
-
 var Toml Config
 
 // Parse Toml config
