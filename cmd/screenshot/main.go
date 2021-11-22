@@ -37,7 +37,14 @@ func main() {
 	cmdVersion(c)
 
 	if c.Config == "" {
-		c.Config = "config.toml"
+		dirname, err := os.UserHomeDir()
+		if err != nil {
+			log.Error(err)
+
+			c.Config = dirname + ".config.toml"
+		}
+
+		c.Config = dirname + "/.config/screenshots-imgur/config.toml"
 	}
 
 	err := config.TomlParse(c.Config)
