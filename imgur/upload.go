@@ -4,6 +4,7 @@ import (
 	"fmt"
 
 	"github.com/MedzikUser/go-screenshot-imgur/webhook"
+	"github.com/atotto/clipboard"
 )
 
 // Upload Image to Imgur, from file
@@ -37,6 +38,11 @@ func next(id string, delhash string) {
 	fmt.Println("Link        -", url)
 	fmt.Println("ID          -", id)
 	fmt.Println("Delete Hash -", delhash)
+
+	err := clipboard.WriteAll(url)
+	if err != nil {
+		fmt.Print(err)
+	}
 
 	webhook.Send(url, delhash)
 }
